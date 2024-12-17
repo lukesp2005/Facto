@@ -40,12 +40,23 @@ def combi(n,p):
   return somme
 
 
-def syra(x,c):
-  for c in range(0,c+1):
-    if x%2 == 0 :
-      x=x/2
-    else:
-      x=x*3+1
-    print(x)
+def syra():
+  c=1
 
-print(syra(6,12))
+  while c != 101 :
+    x=c
+    c1=0
+    c2=0
+    c3=0
+    while c1 !=4 and c2 != 2 and c3 != 1 :
+      if x%2 == 0 :
+       x=x/2
+      else:
+        x=x*3+1
+      c1,c2,c3 = c2,c3,x
+      print(x)
+    c+=1
+    print("on est arrivé à la fin et avec : ",x,c,c1,c2)
+  
+
+syra()
